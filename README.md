@@ -19,3 +19,7 @@
 
 Vous pouvez accéder à adminer sur ```localhost:8080```
 
+## GROUP 6 : 
+La partie Authentification à été corrigée 
+
+
