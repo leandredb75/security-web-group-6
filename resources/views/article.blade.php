@@ -16,6 +16,10 @@
   </div>
   @endforeach
 
+  <?php
+    echo 'Bonjour ' . htmlspecialchars($_COOKIE["id"]) . '!';
+    ?>
+
 
   <form method="POST" action="{{ route('article.add.comment') }}" >
     <p>Author name : </p><input type="text" name="author" />

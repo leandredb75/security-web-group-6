@@ -40,6 +40,7 @@
                       Logout
                     </a>
                   </li>
+                  
                   @endif
                   @if(!\Auth::user())
                   <li class="nav-item">

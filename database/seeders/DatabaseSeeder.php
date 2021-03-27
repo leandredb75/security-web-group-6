@@ -18,13 +18,21 @@ class DatabaseSeeder extends Seeder
         $user = new \App\Models\User;
         $user->name = 'admin';
         $user->email = 'admin@gmail.com';
-        $user->password = md5('admin');
+        $user->role = 'admin';
+        $user->password = password_hash('admin' , PASSWORD_BCRYPT , ["cost" => 10]);
+        $user->save();
+
+        $user = new \App\Models\User;
+        $user->name = 'user';
+        $user->email = 'user@gmail.com';
+        $user->password = password_hash('user' , PASSWORD_BCRYPT , ["cost" => 10]);
         $user->save();
 
         $user = new \App\Models\User;
         $user->name = 'editor';
         $user->email = 'editor@gmail.com';
-        $user->password = md5('editor');
+        $user->role = 'admin';
+        $user->password = password_hash('editor' , PASSWORD_BCRYPT , ["cost" => 10]);
         $user->save();
     }
 }
